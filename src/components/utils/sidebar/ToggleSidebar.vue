@@ -1,22 +1,23 @@
 <script setup>
-import { ref } from "vue";
+import { computed } from "vue";
+import { storeToRefs } from "pinia";
 
-const emits = defineEmits(["sidebarActive"]);
-let isSidebarActive = ref(true);
+import { useGeneralStore } from "../../../stores/general";
+const { isSidebarOpen } = storeToRefs(useGeneralStore());
+
+const currentSidebarIcon = computed(() =>
+  isSidebarOpen.value
+    ? "md-keyboarddoublearrowleft-round"
+    : "md-keyboarddoublearrowright-round"
+);
 </script>
 <template>
   <div
-    class="absolute bottom-5 flex items-center space-x-2 cursor-pointer rounded font-semibold text-zinc-400"
-    @click="emits('sidebarActive', (isSidebarActive = !isSidebarActive))"
+    class="absolute flex items-center space-x-2 font-semibold rounded cursor-pointer bottom-5 text-zinc-400"
+    @click="isSidebarOpen = !isSidebarOpen"
   >
-    <Icon
-      :name="
-        isSidebarActive
-          ? 'md-keyboarddoublearrowleft-round'
-          : 'md-keyboarddoublearrowright-round'
-      "
-    />
-    <span v-if="isSidebarActive">Collapse</span>
+    <Icon :name="currentSidebarIcon" />
+    <span v-if="isSidebarOpen">Collapse</span>
   </div>
 </template>
 <style scoped></style>

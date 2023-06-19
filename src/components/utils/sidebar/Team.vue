@@ -1,17 +1,17 @@
 <script setup>
 defineProps({
   teams: Array,
-  isSidebarActive: Boolean,
+  isSidebarOpen: Boolean,
 });
 </script>
 <template>
-  <div class="px-2">
+  <div class="px-2" :class="{ 'text-center': !isSidebarOpen }">
     <a href="" class="text-sm font-bold">Team</a>
 
     <div class="mt-2">
       <div
         class="flex flex-col"
-        :class="isSidebarActive ? 'items-start' : 'items-center'"
+        :class="isSidebarOpen ? 'items-start' : 'items-center'"
       >
         <div v-for="team in teams" :key="team.name">
           <div
@@ -26,14 +26,14 @@ defineProps({
             >
               {{ team.name.substring("0", "1") }}
             </div>
-            <div class="text-[10px]" v-if="isSidebarActive">
+            <div class="text-[10px]" v-if="isSidebarOpen">
               {{ team.name }}
             </div>
           </div>
         </div>
 
         <p class="mt-1 text-[10px] text-zinc-400 whitespace-nowrap">
-          + 1123193280 <span v-if="isSidebarActive"> more users.</span>
+          + 12 <span v-if="isSidebarOpen"> more users.</span>
         </p>
       </div>
     </div>

@@ -13,6 +13,7 @@ import {
   RiArrowDownSLine,
 } from "oh-vue-icons/icons";
 import router from "./router";
+import pinia from "./stores";
 addIcons(
   MdSpacedashboardOutlined,
   MdHomeworkOutlined,
@@ -28,4 +29,5 @@ const app = createApp(App);
 
 app.component("Icon", OhVueIcon);
 app.use(router);
+app.use(pinia);
 app.mount("#app");

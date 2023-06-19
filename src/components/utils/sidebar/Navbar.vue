@@ -1,7 +1,7 @@
 <script setup>
 defineProps({
   menus: Array,
-  isSidebarActive: Boolean,
+  isSidebarOpen: Boolean,
 });
 </script>
 <template>
@@ -28,7 +28,7 @@ defineProps({
           :class="{
             '!text-teal-400': index === 0,
           }"
-          v-if="isSidebarActive"
+          v-if="isSidebarOpen"
           >{{ menu.title }}</a
         >
       </li>

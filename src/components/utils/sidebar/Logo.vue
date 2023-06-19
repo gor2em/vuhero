@@ -1,7 +1,6 @@
 <script setup>
 defineProps({
-  menus: Array,
-  isSidebarActive: Boolean,
+  isSidebarOpen: Boolean,
 });
 </script>
 <template>
@@ -9,7 +8,7 @@ defineProps({
     <a>
       <span class="text-teal-400">.</span>
       <span class="text-rose-600">.</span>
-      <span>{{ isSidebarActive ? "monibil" : "m" }}</span>
+      <span>{{ isSidebarOpen ? "monibil" : "m" }}</span>
     </a>
   </div>
 </template>
