@@ -12,6 +12,7 @@ import {
   MdKeyboarddoublearrowrightRound,
   RiArrowDownSLine,
 } from "oh-vue-icons/icons";
+import router from "./router";
 addIcons(
   MdSpacedashboardOutlined,
   MdHomeworkOutlined,
@@ -26,4 +27,5 @@ addIcons(
 const app = createApp(App);
 
 app.component("Icon", OhVueIcon);
+app.use(router);
 app.mount("#app");

@@ -57,7 +57,7 @@ const teams = ref([
   <aside>
     <div
       :class="[isSidebarActive ? 'w-48' : 'items-center w-20']"
-      class="sticky top-0 flex flex-col min-h-screen p-4 space-y-4 text-xs transition-all duration-100 ease-in-out border-r bg-gradient-to-t from-zinc-50 to-white"
+      class="sticky top-0 flex flex-col min-h-screen p-4 space-y-4 text-xs transition-all duration-100 ease-in-out border-r bg-gradient-to-t from-zinc-100 via-zinc-50 to-white"
     >
       <Logo :is-sidebar-active="isSidebarActive" />
 
