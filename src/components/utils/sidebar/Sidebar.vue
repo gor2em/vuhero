@@ -12,10 +12,12 @@ import teams from "../../../data/teams";
 import { storeToRefs } from "pinia";
 </script>
 <template>
-  <aside>
+  <aside
+    class="sticky top-0 h-screen border-r bg-gradient-to-t from-zinc-100 via-zinc-50 to-white"
+  >
     <div
       :class="{ '!w-20 !items-center ': !isSidebarOpen }"
-      class="sticky top-0 flex flex-col w-48 min-h-screen p-4 space-y-4 text-xs transition-all duration-100 ease-in-out border-r bg-gradient-to-t from-zinc-100 via-zinc-50 to-white"
+      class="flex flex-col w-48 p-4 space-y-4 text-xs transition-all duration-100 ease-in-out"
     >
       <Logo :is-sidebar-open="isSidebarOpen" />
 
