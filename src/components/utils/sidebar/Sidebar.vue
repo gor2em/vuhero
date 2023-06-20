@@ -1,7 +1,9 @@
 <script setup>
+import { storeToRefs } from "pinia";
+
 import Logo from "./Logo.vue";
 import Navbar from "./Navbar.vue";
-import Team from "./Team.vue";
+import Team from "./TeamList.vue";
 import ToggleSidebar from "./ToggleSidebar.vue";
 
 import { useGeneralStore } from "../../../stores/general";
@@ -11,7 +13,6 @@ const { isSidebarOpen, isSidebarActive, isMobile } = storeToRefs(
 
 import menus from "../../../data/menus";
 import teams from "../../../data/teams";
-import { storeToRefs } from "pinia";
 </script>
 <template>
   <aside
