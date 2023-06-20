@@ -11,6 +11,8 @@ import {
   MdKeyboarddoublearrowleftRound,
   MdKeyboarddoublearrowrightRound,
   RiArrowDownSLine,
+  MdMenuopenTwotone,
+  HiSolidDotsVertical,
 } from "oh-vue-icons/icons";
 import router from "./router";
 import pinia from "./stores";
@@ -22,7 +24,9 @@ addIcons(
   CoCog,
   MdKeyboarddoublearrowleftRound,
   MdKeyboarddoublearrowrightRound,
-  RiArrowDownSLine
+  RiArrowDownSLine,
+  MdMenuopenTwotone,
+  HiSolidDotsVertical
 );
 
 const app = createApp(App);

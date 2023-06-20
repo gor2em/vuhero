@@ -6,10 +6,11 @@ import Sidebar from "../components/utils/sidebar/Sidebar.vue";
   <div class="flex">
     <Sidebar />
 
-    <main class="w-full">
+    <main class="w-full mx-auto">
       <TheHeader />
-
-      <router-view></router-view>
+      <div class="container px-8 py-4 mx-auto mt-16 mb-4">
+        <router-view></router-view>
+      </div>
     </main>
   </div>
 </template>

@@ -26,13 +26,13 @@ defineProps({
             >
               {{ team.name.substring("0", "1") }}
             </div>
-            <div class="text-[10px]" v-if="isSidebarOpen">
+            <div class="text-xs" v-if="isSidebarOpen">
               {{ team.name }}
             </div>
           </div>
         </div>
 
-        <p class="mt-1 text-[10px] text-zinc-400 whitespace-nowrap">
+        <p class="mt-1 text-xs text-zinc-400 whitespace-nowrap">
           + 12 <span v-if="isSidebarOpen"> more users.</span>
         </p>
       </div>
