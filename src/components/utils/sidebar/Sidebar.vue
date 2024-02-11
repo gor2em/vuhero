@@ -27,7 +27,7 @@ import teams from "../../../data/teams";
 
       <Navbar :menus="menus" :is-sidebar-open="isSidebarOpen" />
 
-      <Team :teams="teams" :is-sidebar-open="isSidebarOpen" />
+      <!-- <Team :teams="teams" :is-sidebar-open="isSidebarOpen" /> -->
 
       <ToggleSidebar :class="isMobile ? 'hidden' : ''" />
     </div>
