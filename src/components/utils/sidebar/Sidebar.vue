@@ -12,7 +12,6 @@ const { isSidebarOpen, isSidebarActive, isMobile } = storeToRefs(
 );
 
 import menus from "../../../data/menus";
-import teams from "../../../data/teams";
 </script>
 <template>
   <aside
