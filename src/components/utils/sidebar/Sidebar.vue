@@ -29,6 +29,7 @@ import teams from "../../../data/teams";
 
       <!-- <Team :teams="teams" :is-sidebar-open="isSidebarOpen" /> -->
 
+      
       <ToggleSidebar :class="isMobile ? 'hidden' : ''" />
     </div>
   </aside>
